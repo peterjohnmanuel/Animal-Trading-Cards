@@ -6,7 +6,7 @@
 
 ## Via checkout
 
-* Checkout the [ClassicArcadeGame Repository](https://github.com/peterjohnmanuel/Animal-Trading-Cards).
+* Checkout the [Animal Trading Cards Repository](https://github.com/peterjohnmanuel/Animal-Trading-Cards).
 * Navigate to where you had check out the solution and click on the index.html file.
 * The game should start automatically. If it does not start then hit F5 to refresh. 
 
