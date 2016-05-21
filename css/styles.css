@@ -1,0 +1,54 @@
+/* add your CSS here */
+body{
+    font-family: "Arial";
+}
+
+h3{
+    font-size: 40px;
+    margin: 10px 0px 10px 0px; 
+}
+
+.animal-attr{    
+    font-weight: bold;
+}
+
+.animal-fact{
+    font-style: italic;
+}
+
+.animal-details{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d3d3d3;
+    padding: 0% 3% 1% 3%;    
+    line-height: 130%;
+}
+
+
+.thumbnail{
+    padding: 1%;
+    max-height: 650px;
+    max-width: 300px;
+    border-style: solid;
+    border-color: #a9a9a9;
+    border-width: 0.5px;
+    box-shadow: 2px 5px 5px 2px #d3d3d3;
+    margin: 20px 0px 20px 20px;    
+    display:inline;
+    float: left;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 5px; 
+}
+
+p{
+    margin-bottom: 4px;
+}
