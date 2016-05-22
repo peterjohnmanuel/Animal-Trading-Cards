@@ -1,7 +1,5 @@
 "use strict";
 
-var data = "%data%";
-
 var animals = {
 
     "animals": [{
@@ -28,26 +26,12 @@ var animals = {
     }]
 }
 
-animals.display = function () {
+$(function () {
+    
+  var animalScript = $("#animal-template").html();
+  var animalTemplate = Handlebars.compile(animalScript);
+  var context = animals;
+  var compliedAnimalTemplate = animalTemplate(context);
 
-    animals.animals.forEach(function (animal) {
-
-        var formattedAnimalName = animalName.replace(data, animal.name);
-        var formattedAnimalImage = animalImage.replace(data, animal.img).replace("%dataAlt%", animal.alt);
-
-        var formattedAnimalAttributes = animalAttr.replace("%dataScientificName%", animal.scientificName)
-        .replace("%dataAverageLength%", animal.averageLength)
-        .replace("%dataAverageLifeSpan%", animal.averageLifespan)
-        .replace("%dataHabitat%", animal.habitat);
-        var formattedAnimalFact = animalFact.replace(data, animal.fact);
-        var formattedAnimalDescription = animalDescription.replace(data, animal.description);
-        
-        $(".animals:last").append(thumbnail);
-        $(".animals > .thumbnail:last").append(formattedAnimalName, formattedAnimalImage, animalDetails);
-        $(".animals > .thumbnail > .animal-details:last").append(formattedAnimalFact, formattedAnimalAttributes, formattedAnimalDescription);
-
-    });
-}
-
-
-animals.display();
+  $('.animals').html(compliedAnimalTemplate);
+});

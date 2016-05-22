@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Animal Trading Cards</title>
-	
+
 	<link href="css\styles.css" rel="stylesheet" />
+
+
+
+
 </head>
+
 <body>
-	
+
 	<section class="animals">
 	</section>
-	
+
 	<script src="js/jQuery.js"></script>
 	<script src="js/handlebars-v4.0.5.js"></script>
 	<script src="js/helper.js"></script>
 	<script src="js/animal.js"></script>
 	
+	<script id="animal-template" type="text/x-handlebars-template">
+		{{#each animals}}
+		<section class="thumbnail">
+			<h3 class="animal-title"> {{name}}</h3>
+			<img src="{{img}}" alt="{{alt}}">
+			<section class="animal-details">
+				<p class="animal-fact">{{fact}}</p>
+
+				<ul class="fact-list">
+					<li><span class="animal-attr">Scientific Name</span>: {{scientificName}}</li>
+					<li><span class="animal-attr">Average Length</span>: {{averageLength}}</li>
+					<li><span class="animal-attr">Average Lifespan</span>: {{averageLifespan}}</li>
+					<li><span class="animal-attr">Habitat</span>: {{habitat}}</li>
+				</ul>
+				<p>{{description}}</p>
+			</section>
+		</section>
+		{{/each}}
+	</script>
+
+
 </body>
+
 </html>
